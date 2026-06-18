@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Kshama Bhatt — Site Reliability & ML Systems Engineer. SRE at IBM, MSE CIS at University of Pennsylvania." />
+  <meta name="theme-color" content="#0a0510" />
+  <title>Kshama Bhatt</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect x='8' y='8' width='16' height='16' transform='rotate(45 16 16)' fill='%23ff3da6'/%3E%3C/svg%3E" />
+</head>
+<body>
+  <!-- Animated gradient background -->
+  <div class="bg-canvas" aria-hidden="true">
+    <div class="blob blob-magenta"></div>
+    <div class="blob blob-purple"></div>
+    <div class="blob blob-rose"></div>
+    <div class="blob blob-cursor"></div>
+    <div class="grain"></div>
+  </div>
+
+  <!-- Top nav, appears on scroll -->
+  <nav class="topnav" id="topnav">
+    <a href="#home" class="topnav-logo" aria-label="Home">
+      <svg viewBox="0 0 24 24" width="14" height="14" aria-hidden="true">
+        <rect x="6" y="6" width="12" height="12" transform="rotate(45 12 12)" fill="currentColor"/>
+      </svg>
+      <span>kshama</span>
+    </a>
+    <div class="topnav-links">
+      <a href="#about">about</a>
+      <a href="#now">now</a>
+      <a href="#experience">experience</a>
+      <a href="#projects">projects</a>
+      <a href="#recognition">recognition</a>
+      <a href="#contact">contact</a>
+    </div>
+  </nav>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero" id="home">
+      <div class="hero-inner">
+        <div class="hero-logo" aria-hidden="true">
+          <svg viewBox="0 0 40 40" width="40" height="40">
+            <defs>
+              <pattern id="dots" x="0" y="0" width="3" height="3" patternUnits="userSpaceOnUse">
+                <circle cx="1.5" cy="1.5" r="0.7" fill="#f5f0f5"/>
+              </pattern>
+            </defs>
+            <rect x="10" y="10" width="20" height="20" transform="rotate(45 20 20)" fill="url(#dots)"/>
+          </svg>
+        </div>
+
+        <h1 class="hero-name">
+          Hi, I'm Kshama <span class="hero-wave" aria-hidden="true">👋</span>
+        </h1>
+
+        <p class="hero-tagline">
+          I make production systems calmer, and the AI agents that help me do it.
+        </p>
+
+        <p class="hero-blurb">
+          Site Reliability Engineer at <em>IBM</em>. Headed to the
+          <em>University of Pennsylvania</em> for an MSE in Computer &amp; Information Science.
+          Currently obsessing over MCP, multi-agent orchestration, and learned infrastructure.
+        </p>
+
+        <div class="hero-foot">
+          <div class="hero-socials">
+            <a class="hero-social" href="https://github.com/kshama7" target="_blank" rel="noopener" aria-label="GitHub">
+              <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" fill="currentColor">
+                <path d="M12 .5A11.5 11.5 0 0 0 .5 12a11.5 11.5 0 0 0 7.86 10.92c.58.11.79-.25.79-.56v-2c-3.2.7-3.88-1.37-3.88-1.37-.52-1.33-1.28-1.69-1.28-1.69-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.2 1.77 1.2 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.55-.29-5.24-1.28-5.24-5.69 0-1.26.45-2.28 1.18-3.09-.12-.29-.51-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11 11 0 0 1 5.78 0c2.21-1.49 3.18-1.18 3.18-1.18.62 1.59.23 2.76.11 3.05.73.81 1.18 1.83 1.18 3.09 0 4.42-2.69 5.39-5.26 5.68.41.36.78 1.05.78 2.12v3.14c0 .31.21.68.8.56A11.5 11.5 0 0 0 23.5 12 11.5 11.5 0 0 0 12 .5z"/>
+              </svg>
+            </a>
+            <a class="hero-social" href="https://linkedin.com/in/kshama-bhatt-28941724a" target="_blank" rel="noopener" aria-label="LinkedIn">
+              <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" fill="currentColor">
+                <path d="M20.5 2h-17A1.5 1.5 0 0 0 2 3.5v17A1.5 1.5 0 0 0 3.5 22h17a1.5 1.5 0 0 0 1.5-1.5v-17A1.5 1.5 0 0 0 20.5 2zM8 19H5v-9h3v9zM6.5 8.25A1.75 1.75 0 1 1 8.25 6.5 1.75 1.75 0 0 1 6.5 8.25zM19 19h-3v-4.74c0-1.42-.6-1.93-1.38-1.93-1.32 0-2 1.06-2 1.06V19h-3v-9h2.9v1.3a3.07 3.07 0 0 1 2.7-1.4c1.55 0 3.78.9 3.78 4.27V19z"/>
+              </svg>
+            </a>
+            <a class="hero-social" href="mailto:kshama.bhatt7@gmail.com" aria-label="Email">
+              <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" fill="currentColor">
+                <path d="M22 6c0-1.1-.9-2-2-2H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6zm-2 0-8 5-8-5h16zm0 12H4V8l8 5 8-5v10z"/>
+              </svg>
+            </a>
+          </div>
+
+          <div class="hero-scroll">
+            <span>scroll</span>
+            <div class="hero-scroll-line"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="section" id="about">
+      <header class="section-head reveal">
+        <span class="section-num">01</span>
+        <h2 class="section-title">hello! <span aria-hidden="true">✨</span></h2>
+      </header>
+
+      <div class="prose reveal">
+        <p>
+          I'm Kshama — a <strong>Site Reliability Engineer at IBM</strong> based in Bengaluru,
+          running production OpenShift clusters that serve enterprise Java workloads and IBM MQ across AWS
+          and IBM Cloud. I own version upgrades, lead Sev1 incident response, and ship the automation that
+          makes 2 AM pages a little less common.
+        </p>
+        <p>
+          Before SRE, I studied Information Science at <strong>B.M.S. College of Engineering</strong>
+          (CGPA 9.34/10) and interned at IBM and HPE building full-stack tools. In August 2026 I'm starting
+          an <strong>MSE in Computer &amp; Information Science at the University of Pennsylvania</strong>,
+          where I want to push into ML systems and learned infrastructure.
+        </p>
+        <p>
+          My team's agentic AI platform took <strong>2nd place at IBM Bobathon 2026</strong> and I got
+          to present it at WIST (Women in Software &amp; Technology). When I'm not paging or coding, I'm
+          reading SRE postmortems and watching reinforcement learning research happen in real time.
+        </p>
+      </div>
+    </section>
+
+    <!-- NOW -->
+    <section class="section" id="now">
+      <header class="section-head reveal">
+        <span class="section-num">02</span>
+        <h2 class="section-title">what i'm doing now</h2>
+      </header>
+
+      <div class="now-grid">
+        <article class="now-card reveal">
+          <span class="now-tag">building</span>
+          <h3>Custom MCP servers</h3>
+          <p>Writing Model Context Protocol servers for Loki and Prometheus so reliability agents can reason over observability data directly.</p>
+        </article>
+        <article class="now-card reveal">
+          <span class="now-tag">operating</span>
+          <h3>OpenShift / ROKS at production scale</h3>
+          <p>Version upgrades, worker-node scaling, TLS reconciliation, and SOC2-flavored compliance drift across AWS + IBM Cloud.</p>
+        </article>
+        <article class="now-card reveal">
+          <span class="now-tag">researching</span>
+          <h3>Multi-agent orchestration</h3>
+          <p>How a master agent should decompose work across specialized workers when the context window is the bottleneck.</p>
+        </article>
+        <article class="now-card reveal">
+          <span class="now-tag">prepping</span>
+          <h3>Penn MSE CIS · Fall 2026</h3>
+          <p>Brushing up on systems theory and ML fundamentals before grad school. Bengaluru → Philadelphia in August.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section class="section" id="experience">
+      <header class="section-head reveal">
+        <span class="section-num">03</span>
+        <h2 class="section-title">past experience</h2>
+      </header>
+
+      <div class="timeline">
+        <article class="job reveal">
+          <div class="job-head">
+            <h3 class="job-title">Site Reliability Engineer <span class="job-at">@ IBM</span></h3>
+            <time class="job-time">Aug 2024 — Present</time>
+          </div>
+          <p class="job-sub">EASeJ &amp; IBM MQ on Cloud (MCSP) · Bengaluru, India</p>
+          <p class="job-desc">
+            I operate production OpenShift/ROKS clusters across dev, staging, and prod on AWS and
+            IBM Cloud. I lead Sev1/Sev2 incident response, own version upgrades and TLS reconciliation,
+            tuned our Prometheus/Grafana/Instana stack to cut unplanned downtime <em>30%</em> and MTTR
+            <em>40%</em>, and shipped an end-to-end AWS Cost Optimization Platform from CUR → Lambda →
+            DynamoDB → Grafana. I also drove SOC2 compliance audits on backup alerting, IAM, and Secrets
+            Manager rotation.
+          </p>
+          <div class="job-badges">
+            <span>OpenShift</span><span>AWS</span><span>Terraform</span><span>Ansible</span>
+            <span>Prometheus</span><span>Grafana</span><span>ArgoCD</span><span>Jenkins</span>
+            <span>Python</span><span>SOC2</span>
+          </div>
+        </article>
+
+        <article class="job reveal">
+          <div class="job-head">
+            <h3 class="job-title">Software Engineer Intern <span class="job-at">@ IBM</span></h3>
+            <time class="job-time">Jan 2024 — Jul 2024</time>
+          </div>
+          <p class="job-sub">Watsonx &amp; Offering Cost Calculator · Bengaluru, India</p>
+          <p class="job-desc">
+            Tuned DB2 queries and backend logic for a high-traffic API, and built Python + React
+            automation around WatsonxLLM to replace manual service-management workflows.
+          </p>
+          <div class="job-badges">
+            <span>Python</span><span>React</span><span>DB2</span><span>WatsonxLLM</span>
+          </div>
+        </article>
+
+        <article class="job reveal">
+          <div class="job-head">
+            <h3 class="job-title">Software Engineer Intern <span class="job-at">@ Hewlett Packard Enterprise</span></h3>
+            <time class="job-time">Feb 2023 — May 2023</time>
+          </div>
+          <p class="job-sub">Open Source Component Selector · Remote</p>
+          <p class="job-desc">
+            Built a full-stack open-source component selector in Flask, MySQL, and React. Designed
+            backend schemas for metadata-based search and license filtering.
+          </p>
+          <div class="job-badges">
+            <span>Flask</span><span>MySQL</span><span>React</span>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- THINGS I'VE MADE (Carousel) -->
+    <section class="section" id="projects">
+      <header class="section-head reveal">
+        <span class="section-num">04</span>
+        <h2 class="section-title">things i've made</h2>
+      </header>
+      <p class="section-lede reveal">A few of the projects I've shipped, broken, and learned from.</p>
+
+      <div class="carousel reveal">
+        <button class="carousel-btn carousel-prev" aria-label="Previous">‹</button>
+        <div class="carousel-track" id="carousel-track">
+          <article class="proj">
+            <div class="proj-badge">★ 2nd place · IBM Bobathon 2026</div>
+            <h3 class="proj-title">Autonomous Reliability Defenders</h3>
+            <p class="proj-desc">
+              An agentic AI orchestration platform: a master agent coordinates specialized workers
+              (security, capacity, logs, deployment) for pre-deploy validation and post-deploy
+              incident analysis. Custom MCP servers for Loki and Prometheus; solved the
+              200K context-window limit via task decomposition. Presented at WIST.
+            </p>
+            <div class="proj-badges">
+              <span>MCP</span><span>Multi-Agent</span><span>Prometheus</span><span>Loki</span><span>ArgoCD</span>
+            </div>
+          </article>
+
+          <article class="proj">
+            <h3 class="proj-title">KubePilot</h3>
+            <p class="proj-sub">AI-powered Kubernetes reliability platform</p>
+            <p class="proj-desc">
+              A cloud-native platform that analyzes cluster health, resource utilization, and upgrade
+              readiness. It surfaces remediation guidance for pod failures, node instability, and
+              misconfigured workloads, and reduces drift via ArgoCD GitOps.
+            </p>
+            <div class="proj-badges">
+              <span>Kubernetes</span><span>Go</span><span>Prometheus</span><span>Grafana</span><span>Terraform</span><span>Next.js</span>
+            </div>
+          </article>
+
+          <article class="proj">
+            <h3 class="proj-title">RL Portfolio Optimization</h3>
+            <p class="proj-sub">Capstone · <a href="https://github.com/kshama7/capstone" target="_blank" rel="noopener">github ↗</a></p>
+            <p class="proj-desc">
+              Applied Deep Q-Networks to automated portfolio management in an OpenAI Gym environment.
+              Designed reward shaping and a replay buffer that gave stable convergence on
+              multi-asset allocation.
+            </p>
+            <div class="proj-badges">
+              <span>TensorFlow</span><span>OpenAI Gym</span><span>DQN</span><span>RL</span>
+            </div>
+          </article>
+
+          <article class="proj">
+            <h3 class="proj-title">Watsonx.data Product Assistant</h3>
+            <p class="proj-desc">
+              A RAG assistant that retrieves technical knowledge from Slack and GitHub. Milvus vector
+              store backed by IBM Granite LLMs for context-grounded answers about a product I work
+              with daily.
+            </p>
+            <div class="proj-badges">
+              <span>Python</span><span>Flask</span><span>Milvus</span><span>IBM Granite</span><span>RAG</span>
+            </div>
+          </article>
+
+          <article class="proj">
+            <h3 class="proj-title">QuickAid: Ambulance Booking</h3>
+            <p class="proj-sub">Peer-reviewed · <a href="https://www.ijmrsetm.com/admin/img/15_Ambulance_NC.pdf" target="_blank" rel="noopener">IJMRSETM ↗</a></p>
+            <p class="proj-desc">
+              Co-authored an emergency response system that reduces dispatch latency. Published a
+              peer-reviewed paper on the architecture and field evaluation in IJMRSETM Vol. 10 Issue 7.
+            </p>
+            <div class="proj-badges">
+              <span>Full-Stack</span><span>Published Research</span>
+            </div>
+          </article>
+        </div>
+        <button class="carousel-btn carousel-next" aria-label="Next">›</button>
+      </div>
+
+      <div class="carousel-dots" id="carousel-dots" aria-hidden="true"></div>
+    </section>
+
+    <!-- CURRENTLY EXPLORING (Gazi's "Currently Reading" adapted) -->
+    <section class="section" id="exploring">
+      <header class="section-head reveal">
+        <span class="section-num">05</span>
+        <h2 class="section-title">on my desk right now</h2>
+      </header>
+      <p class="section-lede reveal">Papers, posts, and ideas eating my evenings.</p>
+
+      <ul class="reading-list">
+        <li class="reading-item reveal">
+          <span class="reading-tag">reading</span>
+          <h4>Site Reliability Engineering — Google</h4>
+          <p>Re-reading parts on error budgets and toil. Still the cleanest articulation of the discipline.</p>
+        </li>
+        <li class="reading-item reveal">
+          <span class="reading-tag">spec</span>
+          <h4>Model Context Protocol</h4>
+          <p>Spec + reference servers. Trying to understand the failure modes before I commit to MCP as the integration layer for everything.</p>
+        </li>
+        <li class="reading-item reveal">
+          <span class="reading-tag">paper</span>
+          <h4>The Case for Learned Index Structures</h4>
+          <p>Kraska et al. on replacing classic data structures with learned models. Going into Penn with this on my mind.</p>
+        </li>
+        <li class="reading-item reveal">
+          <span class="reading-tag">writing</span>
+          <h4>The Phoenix Project</h4>
+          <p>Comfort re-read between incidents. Three Ways still hold up.</p>
+        </li>
+      </ul>
+    </section>
+
+    <!-- RECOGNITION -->
+    <section class="section" id="recognition">
+      <header class="section-head reveal">
+        <span class="section-num">06</span>
+        <h2 class="section-title">recognition &amp; writing</h2>
+      </header>
+
+      <ul class="recognition-list">
+        <li class="recog-item reveal">
+          <time>2026</time>
+          <div>
+            <h4>2nd Place — IBM Bobathon 2026</h4>
+            <p>For Autonomous Reliability Defenders, an agentic AI platform for pre-deploy validation and incident analysis.</p>
+          </div>
+        </li>
+        <li class="recog-item reveal">
+          <time>2026</time>
+          <div>
+            <h4>Speaker — WIST (Women in Software &amp; Technology)</h4>
+            <p>Presented the design and lessons from a multi-agent SRE assistant built with custom MCP servers.</p>
+          </div>
+        </li>
+        <li class="recog-item reveal">
+          <time>2023</time>
+          <div>
+            <h4>Published Paper — IJMRSETM Vol. 10 Issue 7</h4>
+            <p>"QuickAid: Ambulance Booking System." <a href="https://www.ijmrsetm.com/admin/img/15_Ambulance_NC.pdf" target="_blank" rel="noopener">Read ↗</a></p>
+          </div>
+        </li>
+      </ul>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="section section-contact" id="contact">
+      <header class="section-head reveal">
+        <span class="section-num">07</span>
+        <h2 class="section-title">find me elsewhere</h2>
+      </header>
+
+      <div class="contact-body reveal">
+        <p class="contact-lede">
+          If you want to talk SRE, ML systems, agentic AI, or grad school —
+          the door is open.
+        </p>
+
+        <div class="contact-links">
+          <a class="contact-link" href="mailto:kshama.bhatt7@gmail.com">
+            <span class="contact-link-label">email</span>
+            <span class="contact-link-value">kshama.bhatt7@gmail.com</span>
+            <span class="contact-link-arrow">↗</span>
+          </a>
+          <a class="contact-link" href="https://linkedin.com/in/kshama-bhatt-28941724a" target="_blank" rel="noopener">
+            <span class="contact-link-label">linkedin</span>
+            <span class="contact-link-value">/in/kshama-bhatt</span>
+            <span class="contact-link-arrow">↗</span>
+          </a>
+          <a class="contact-link" href="https://github.com/kshama7" target="_blank" rel="noopener">
+            <span class="contact-link-label">github</span>
+            <span class="contact-link-value">@kshama7</span>
+            <span class="contact-link-arrow">↗</span>
+          </a>
+          <a class="contact-link" href="resume.pdf" target="_blank" rel="noopener">
+            <span class="contact-link-label">resume</span>
+            <span class="contact-link-value">download pdf</span>
+            <span class="contact-link-arrow">↗</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <span>Built and designed by Kshama Bhatt.</span>
+      <span class="footer-dot">·</span>
+      <span>All rights reserved. © 2026</span>
+    </footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
