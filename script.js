@@ -1,6 +1,7 @@
 /* ============================================================
    Kshama Bhatt — Portfolio
-   Cursor-follow blob, click ripples, scroll reveals, project carousel.
+   Cursor-follow blob, click ripples, scroll reveals,
+   project carousel, experience tabs, active-nav highlighting.
    ============================================================ */
 
 (() => {
@@ -112,16 +113,25 @@
     revealEls.forEach((el) => el.classList.add('in-view'));
   }
 
-  /* ---------- Top nav ---------- */
-  const topnav = document.getElementById('topnav');
-  const hero   = document.getElementById('home');
-  if (topnav && hero) {
-    const navObserver = new IntersectionObserver((entries) => {
+  /* ---------- Active nav link highlighting ---------- */
+  const navLinks = document.querySelectorAll('.topnav-links a[href^="#"]');
+  const sections = Array.from(navLinks).map(link => {
+    const id = link.getAttribute('href').slice(1);
+    return { id, link, el: document.getElementById(id) };
+  }).filter(s => s.el);
+
+  if (sections.length && 'IntersectionObserver' in window) {
+    const navIO = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
-        topnav.classList.toggle('is-visible', !entry.isIntersecting);
+        const match = sections.find(s => s.el === entry.target);
+        if (!match) return;
+        if (entry.isIntersecting) {
+          navLinks.forEach(l => l.classList.remove('is-active'));
+          match.link.classList.add('is-active');
+        }
       });
-    }, { threshold: 0.15 });
-    navObserver.observe(hero);
+    }, { rootMargin: '-40% 0px -55% 0px' });
+    sections.forEach(s => navIO.observe(s.el));
   }
 
   /* ---------- Smooth-scroll for anchors ---------- */
@@ -137,6 +147,26 @@
     });
   });
 
+  /* ---------- Experience tabs ---------- */
+  const expTabs = document.querySelectorAll('.exp-tab');
+  const expPanels = document.querySelectorAll('.exp-panel');
+  expTabs.forEach((tab) => {
+    tab.addEventListener('click', () => {
+      const id = tab.dataset.tab;
+      expTabs.forEach((t) => {
+        const isActive = t === tab;
+        t.classList.toggle('is-active', isActive);
+        t.setAttribute('aria-selected', isActive ? 'true' : 'false');
+      });
+      expPanels.forEach((p) => {
+        const isActive = p.dataset.panel === id;
+        p.classList.toggle('is-active', isActive);
+        if (isActive) p.removeAttribute('hidden');
+        else p.setAttribute('hidden', '');
+      });
+    });
+  });
+
   /* ---------- Projects carousel ---------- */
   const track  = document.getElementById('carousel-track');
   const dotsEl = document.getElementById('carousel-dots');
@@ -146,7 +176,6 @@
   if (track) {
     const cards = Array.from(track.querySelectorAll('.proj'));
 
-    // Build dot pagination
     if (dotsEl) {
       cards.forEach((_, i) => {
         const dot = document.createElement('button');
@@ -191,7 +220,6 @@
       requestAnimationFrame(updateActive);
     }, { passive: true });
 
-    // initial active state
     updateActive();
     window.addEventListener('resize', updateActive);
   }
