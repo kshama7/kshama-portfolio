@@ -207,6 +207,31 @@
         <button class="carousel-btn carousel-prev" aria-label="Previous">‹</button>
         <div class="carousel-track" id="carousel-track">
           <article class="proj">
+            <div class="proj-badge">Live demo · production rebuild</div>
+            <h3 class="proj-title">Portfolio Platform</h3>
+            <p class="proj-sub">
+              Prod-grade DRL + classical optimization ·
+              <a href="https://portfolio-web-iu0h.onrender.com" target="_blank" rel="noopener">live</a> ·
+              <a href="https://github.com/kshama7/portfolio-platform" target="_blank" rel="noopener">source</a>
+            </p>
+            <p class="proj-desc">
+              Five deep-RL agents (PPO, A2C, DDPG, SAC, TD3) and four classical optimizers
+              (Markowitz, Min-Variance, Max-Sharpe, HRP) that allocate US-stock portfolios,
+              served behind a FastAPI inference API and a Next.js dashboard. Trained in
+              Stable-Baselines3, exported to ONNX, and run as live per-day inference on
+              Yahoo Finance prices — the SAC agent beat the S&P 500 by 5.6× out-of-sample.
+            </p>
+            <p class="proj-desc">
+              The optimizer is the payload; the SRE platform around it is the point — Helm/ArgoCD
+              GitOps, multi-burn-rate Prometheus SLOs, a runbook, and a CI/CD pipeline. The
+              production rebuild of my undergraduate capstone research.
+            </p>
+            <div class="proj-badges">
+              <span>FastAPI</span><span>ONNX</span><span>Stable-Baselines3</span><span>Next.js</span><span>Helm</span><span>ArgoCD</span><span>Prometheus</span><span>Docker</span>
+            </div>
+          </article>
+
+          <article class="proj">
             <div class="proj-badge">2nd place, IBM Bobathon 2026</div>
             <h3 class="proj-title">Autonomous SRE Analysis Platform</h3>
             <p class="proj-sub">Built on IBM Bob · team Autonomous Reliability Defenders</p>
@@ -253,12 +278,16 @@
           </article>
 
           <article class="proj">
-            <h3 class="proj-title">RL Portfolio Optimization</h3>
-            <p class="proj-sub">Capstone · <a href="https://github.com/kshama7/capstone" target="_blank" rel="noopener">github</a></p>
+            <h3 class="proj-title">RL Portfolio Optimization — Capstone</h3>
+            <p class="proj-sub">Undergraduate research · <a href="https://github.com/kshama7/capstone" target="_blank" rel="noopener">github</a></p>
             <p class="proj-desc">
-              Applied Deep Q-Networks to automated portfolio management in an OpenAI Gym environment.
-              Designed reward shaping and a replay buffer that gave stable convergence on
-              multi-asset allocation.
+              The research this all grew from. Applied deep reinforcement learning to automated
+              portfolio management in an OpenAI Gym environment, with reward shaping and a replay
+              buffer that gave stable convergence on multi-asset allocation.
+            </p>
+            <p class="proj-desc">
+              It lived in notebooks — so I rebuilt it as the production
+              <a href="https://github.com/kshama7/portfolio-platform" target="_blank" rel="noopener">Portfolio Platform</a> above.
             </p>
             <div class="proj-badges">
               <span>TensorFlow</span><span>OpenAI Gym</span><span>DQN</span><span>RL</span>
