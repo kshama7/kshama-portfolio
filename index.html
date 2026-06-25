@@ -232,6 +232,30 @@
           </article>
 
           <article class="proj">
+            <div class="proj-badge">Distributed systems · fault tolerance</div>
+            <h3 class="proj-title">distsched — Distributed Job Scheduler</h3>
+            <p class="proj-sub">
+              Go · gRPC · leader election · failure recovery ·
+              <a href="https://github.com/kshama7/distsched" target="_blank" rel="noopener">source</a>
+            </p>
+            <p class="proj-desc">
+              A fault-tolerant distributed job scheduler in Go. A cluster of schedulers elects a leader
+              (Raft-style majority vote with term fencing), and the leader dispatches tasks to a pool of
+              workers that run them as subprocesses — with a priority queue, exponential-backoff retry, a
+              dead-letter queue, DAG dependencies, and delayed/cron schedules.
+            </p>
+            <p class="proj-desc">
+              Built for resilience: metadata replicates to followers so a new leader takes over on failover,
+              a reaper requeues the work of dead workers and expired leases, and orphaned jobs are reclaimed
+              on restart. A Docker Compose cluster and a chaos script prove failover by killing the leader
+              under load — and the docs are deliberately honest about what's implemented versus cut.
+            </p>
+            <div class="proj-badges">
+              <span>Go</span><span>gRPC</span><span>Protobuf</span><span>Leader Election</span><span>BoltDB</span><span>Prometheus</span><span>Docker Compose</span><span>Kubernetes</span>
+            </div>
+          </article>
+
+          <article class="proj">
             <div class="proj-badge">2nd place, IBM Bobathon 2026</div>
             <h3 class="proj-title">Autonomous SRE Analysis Platform</h3>
             <p class="proj-sub">Built on IBM Bob · team Autonomous Reliability Defenders</p>
