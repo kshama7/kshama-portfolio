@@ -290,31 +290,22 @@
 
           <article class="proj">
             <h3 class="proj-title">KubePilot</h3>
-            <p class="proj-sub">AI-powered Kubernetes reliability platform</p>
+            <p class="proj-sub">
+              Kubernetes reliability platform · deterministic-first ·
+              <a href="https://github.com/kshama7/kubepilot" target="_blank" rel="noopener">source</a>
+            </p>
             <p class="proj-desc">
-              A cloud-native platform that analyzes cluster health, resource utilization, and upgrade
-              readiness. It surfaces remediation guidance for pod failures, node instability, and
-              misconfigured workloads, and reduces drift via ArgoCD GitOps.
+              Eight rule-based analyzers (cluster health, workloads, resources, reliability, upgrade
+              readiness, GitOps drift, security, capacity) score and triage a live cluster — every
+              finding traces back to a Go rule, not a model guess. Claude only explains and prioritizes
+              findings the rules already produced; it can't invent one.
+            </p>
+            <p class="proj-desc">
+              Shipped with a Helm chart, full Prometheus/Grafana observability, OpenTelemetry tracing
+              on every analysis run, GitHub Actions CI, and a dark terminal-style Next.js dashboard.
             </p>
             <div class="proj-badges">
-              <span>Kubernetes</span><span>Go</span><span>Prometheus</span><span>Grafana</span><span>Terraform</span><span>Next.js</span>
-            </div>
-          </article>
-
-          <article class="proj">
-            <h3 class="proj-title">RL Portfolio Optimization — Capstone</h3>
-            <p class="proj-sub">Undergraduate research · <a href="https://github.com/kshama7/capstone" target="_blank" rel="noopener">github</a></p>
-            <p class="proj-desc">
-              The research this all grew from. Applied deep reinforcement learning to automated
-              portfolio management in an OpenAI Gym environment, with reward shaping and a replay
-              buffer that gave stable convergence on multi-asset allocation.
-            </p>
-            <p class="proj-desc">
-              It lived in notebooks — so I rebuilt it as the production
-              <a href="https://github.com/kshama7/portfolio-platform" target="_blank" rel="noopener">Portfolio Platform</a> above.
-            </p>
-            <div class="proj-badges">
-              <span>TensorFlow</span><span>OpenAI Gym</span><span>DQN</span><span>RL</span>
+              <span>Go</span><span>Kubernetes</span><span>Claude API</span><span>Prometheus</span><span>Grafana</span><span>Helm</span><span>OpenTelemetry</span><span>Next.js</span>
             </div>
           </article>
 
