@@ -3,9 +3,25 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Kshama Bhatt — Site Reliability & ML Systems Engineer. SRE at IBM, MSE CIS at University of Pennsylvania." />
+  <meta name="description" content="Kshama Bhatt — Site Reliability & ML Systems Engineer. SRE at IBM, MSE CIS at University of Pennsylvania. Open to internships and full-time SRE / ML infra roles." />
   <meta name="theme-color" content="#0a0510" />
-  <title>Kshama Bhatt</title>
+  <title>Kshama Bhatt — Site Reliability & ML Systems Engineer</title>
+  <link rel="canonical" href="https://kshama7.github.io/kshama-portfolio/" />
+
+  <!-- Open Graph / Twitter Card — so a recruiter pasting this link into Slack,
+       LinkedIn, or email gets a rich preview instead of a bare URL. -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://kshama7.github.io/kshama-portfolio/" />
+  <meta property="og:title" content="Kshama Bhatt — Site Reliability & ML Systems Engineer" />
+  <meta property="og:description" content="SRE at IBM cutting downtime 30% and MTTR 40% on production OpenShift. Builds AI tools for reliability work. Heading to UPenn for an MSE in Fall 2026. Open to internships and full-time SRE / ML infra roles." />
+  <meta property="og:image" content="https://kshama7.github.io/kshama-portfolio/og-image.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="Kshama Bhatt — Site Reliability Engineer, AI Infrastructure" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Kshama Bhatt — Site Reliability & ML Systems Engineer" />
+  <meta name="twitter:description" content="SRE at IBM cutting downtime 30% and MTTR 40% on production OpenShift. Builds AI tools for reliability work. Open to internships and full-time SRE / ML infra roles." />
+  <meta name="twitter:image" content="https://kshama7.github.io/kshama-portfolio/og-image.png" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -232,6 +248,47 @@
           </article>
 
           <article class="proj">
+            <div class="proj-badge">Full-stack platform · production-hardened</div>
+            <h3 class="proj-title">KubePilot</h3>
+            <p class="proj-sub">
+              Kubernetes reliability platform · deterministic-first ·
+              <a href="https://github.com/kshama7/kubepilot" target="_blank" rel="noopener">source</a>
+            </p>
+            <p class="proj-desc">
+              Eight rule-based analyzers (cluster health, workloads, resources, reliability, upgrade
+              readiness, GitOps drift, security, capacity) score and triage a live cluster — every
+              finding traces back to a Go rule, not a model guess. Claude only explains and prioritizes
+              findings the rules already produced; it can't invent one.
+            </p>
+            <p class="proj-desc">
+              Shipped with a Helm chart, full Prometheus/Grafana observability, OpenTelemetry tracing
+              on every analysis run, GitHub Actions CI, and a dark terminal-style Next.js dashboard.
+            </p>
+            <div class="proj-badges">
+              <span>Go</span><span>Kubernetes</span><span>Claude API</span><span>Prometheus</span><span>Grafana</span><span>Helm</span><span>OpenTelemetry</span><span>Next.js</span>
+            </div>
+          </article>
+
+          <article class="proj">
+            <div class="proj-badge">2nd place, IBM Bobathon 2026</div>
+            <h3 class="proj-title">Autonomous SRE Analysis Platform</h3>
+            <p class="proj-sub">Built on IBM Bob · team Autonomous Reliability Defenders</p>
+            <p class="proj-desc">
+              Bob orchestrates specialized agents (ArgoCD, Security, Logs, Capacity) that pull
+              live data from ArgoCD, Loki, Prometheus, and Instana through custom MCPs, and
+              product knowledge through Skills.
+            </p>
+            <p class="proj-desc">
+              Engineers ask Bob to analyze a deployment; Bob correlates findings across all four
+              systems and returns a prioritized P0/P1/P2 report with remediation guidance, turning
+              hours of manual investigation into minutes. Presented at WIST.
+            </p>
+            <div class="proj-badges">
+              <span>IBM Bob</span><span>MCP</span><span>Multi-Agent</span><span>ArgoCD</span><span>Loki</span><span>Prometheus</span><span>Instana</span>
+            </div>
+          </article>
+
+          <article class="proj">
             <div class="proj-badge">Distributed systems · fault tolerance</div>
             <h3 class="proj-title">distsched — Distributed Job Scheduler</h3>
             <p class="proj-sub">
@@ -256,25 +313,6 @@
           </article>
 
           <article class="proj">
-            <div class="proj-badge">2nd place, IBM Bobathon 2026</div>
-            <h3 class="proj-title">Autonomous SRE Analysis Platform</h3>
-            <p class="proj-sub">Built on IBM Bob · team Autonomous Reliability Defenders</p>
-            <p class="proj-desc">
-              Bob orchestrates specialized agents (ArgoCD, Security, Logs, Capacity) that pull
-              live data from ArgoCD, Loki, Prometheus, and Instana through custom MCPs, and
-              product knowledge through Skills.
-            </p>
-            <p class="proj-desc">
-              Engineers ask Bob to analyze a deployment; Bob correlates findings across all four
-              systems and returns a prioritized P0/P1/P2 report with remediation guidance, turning
-              hours of manual investigation into minutes. Presented at WIST.
-            </p>
-            <div class="proj-badges">
-              <span>IBM Bob</span><span>MCP</span><span>Multi-Agent</span><span>ArgoCD</span><span>Loki</span><span>Prometheus</span><span>Instana</span>
-            </div>
-          </article>
-
-          <article class="proj">
             <h3 class="proj-title">AWS Cost Optimization Platform</h3>
             <p class="proj-sub">Multi-account cost visibility, shipped at IBM</p>
             <p class="proj-desc">
@@ -285,27 +323,6 @@
             </p>
             <div class="proj-badges">
               <span>AWS</span><span>Terraform</span><span>Lambda</span><span>S3</span><span>DynamoDB</span><span>API Gateway</span><span>Grafana</span><span>Turbonomic</span>
-            </div>
-          </article>
-
-          <article class="proj">
-            <h3 class="proj-title">KubePilot</h3>
-            <p class="proj-sub">
-              Kubernetes reliability platform · deterministic-first ·
-              <a href="https://github.com/kshama7/kubepilot" target="_blank" rel="noopener">source</a>
-            </p>
-            <p class="proj-desc">
-              Eight rule-based analyzers (cluster health, workloads, resources, reliability, upgrade
-              readiness, GitOps drift, security, capacity) score and triage a live cluster — every
-              finding traces back to a Go rule, not a model guess. Claude only explains and prioritizes
-              findings the rules already produced; it can't invent one.
-            </p>
-            <p class="proj-desc">
-              Shipped with a Helm chart, full Prometheus/Grafana observability, OpenTelemetry tracing
-              on every analysis run, GitHub Actions CI, and a dark terminal-style Next.js dashboard.
-            </p>
-            <div class="proj-badges">
-              <span>Go</span><span>Kubernetes</span><span>Claude API</span><span>Prometheus</span><span>Grafana</span><span>Helm</span><span>OpenTelemetry</span><span>Next.js</span>
             </div>
           </article>
 
